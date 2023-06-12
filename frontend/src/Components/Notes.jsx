@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 export const Notes = () => {
   
   useEffect(()=> {
+    // fetch("https://giant-cardigan-newt.cyclic.app/notes", {
     fetch("http://localhost:4200/notes", {
         method: "GET",
         headers: {

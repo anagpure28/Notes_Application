@@ -10,6 +10,7 @@ export const Signup = () => {
         name, email, pass
     }
     
+    // fetch("https://giant-cardigan-newt.cyclic.app/users/register",{
     fetch("http://localhost:4200/users/register",{
         method: "POST",
         headers: {

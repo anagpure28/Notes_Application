@@ -10,6 +10,7 @@ export const AddNote = () => {
         title, body, category
     }
     
+    // fetch("{https://giant-cardigan-newt.cyclic.app/notes/create",{
     fetch("http://localhost:4200/notes/create",{
         method: "POST",
         headers: {
