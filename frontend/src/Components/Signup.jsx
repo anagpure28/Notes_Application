@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {url} from './url';
 
 export const Signup = () => {
   const [name, setName] = useState("")
@@ -10,8 +11,8 @@ export const Signup = () => {
         name, email, pass
     }
     
-    // fetch("https://giant-cardigan-newt.cyclic.app/users/register",{
-    fetch("http://localhost:4200/users/register",{
+    fetch(`${url}/users/register`,{
+    // fetch("http://localhost:4200/users/register",{
         method: "POST",
         headers: {
             "Content-Type": "application/json"

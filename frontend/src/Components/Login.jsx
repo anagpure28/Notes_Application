@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { url } from './url';
 
 export const Login = () => {
     const [email, setEmail] = useState("")
@@ -9,8 +10,8 @@ export const Login = () => {
           email, pass
       }
       
-      // fetch("https://giant-cardigan-newt.cyclic.app/users/login",{
-      fetch("http://localhost:4200/users/login",{
+      fetch(`${url}/users/login`,{
+      // fetch("http://localhost:4200/users/login",{
           method: "POST",
           headers: {
               "Content-Type": "application/json"

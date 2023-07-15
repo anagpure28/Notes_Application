@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { url } from './url';
 
 export const Notes = () => {
   
   useEffect(()=> {
-    // fetch("https://giant-cardigan-newt.cyclic.app/notes", {
-    fetch("http://localhost:4200/notes", {
+    fetch(`${url}/notes`, {
+    // fetch("http://localhost:4200/notes", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

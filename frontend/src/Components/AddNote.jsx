@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { url } from './url';
 
 export const AddNote = () => {
   const [title, setTitle] = useState("")
@@ -10,8 +11,8 @@ export const AddNote = () => {
         title, body, category
     }
     
-    // fetch("{https://giant-cardigan-newt.cyclic.app/notes/create",{
-    fetch("http://localhost:4200/notes/create",{
+    fetch(`${url}/notes/create`,{
+    // fetch("http://localhost:4200/notes/create",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
